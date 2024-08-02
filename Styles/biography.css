@@ -1,0 +1,137 @@
+/* Page layout styles */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  margin: 20px;
+}
+
+/* Greet styles */
+.greet-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  font-size: 2.5vw;
+}
+
+/* details styles */
+.details-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2.5vw;
+}
+
+.details-container aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5vh;
+  border: 2px solid black;
+  padding: 1vh 2.5vw;
+  text-align: center;
+  width: 25vw;
+}
+
+.details-container aside a {
+  background-color: black;
+  color: white;
+  padding: 2vw;
+  transition: all 0.15s ease-in-out;
+}
+
+/* Profile image styles */
+#profile-image {
+  border: 2px solid black;
+  border-radius: 100%;
+  width: 10vw; /* Size of profile image */
+  animation: imageRotate 5s ease-in-out infinite;
+}
+
+/* Expertise styles */
+.expertise-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 2px solid black;
+  padding: 1vh 2.5vw;
+}
+
+.expertise-container h1 {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 1.5vw;
+}
+
+.expertise-container div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1.5vh 1.5vw;
+  gap: 0.25vw;
+  row-gap: 0.25vh;
+  border: 2px solid black;
+}
+
+.expertise-container div a {
+  border: 2px solid black;
+  padding: 0.25vh 0.25vw;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+/* Hover anim for expertise elements */
+.expertise-container div a:hover {
+  scale: 1.1;
+  margin: 0 20px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+/* Hover anim for buttons */
+.clickable:hover {
+  scale: 1.1;
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.45);
+}
+
+/* Keyframe animations */
+@keyframes imageRotate {
+  0% {
+    transform: rotate(-25deg);
+  }
+
+  50% {
+    transform: rotate(25deg);
+  }
+
+  100% {
+    transform: rotate(-25deg);
+  }
+}
+
+/* Mobile support */
+@media (max-width: 760px) {
+  .details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details-container aside {
+    flex-grow: 1;
+    width: 80%;
+  }
+
+  .expertise-container div p {
+    border: 2px solid black;
+    padding: 0.5vh 0.5vw;
+  }
+}
